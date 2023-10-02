@@ -1,5 +1,5 @@
-name: Gitea Actions Demo
-run-name: ${{ gitea.actor }} is testing out Gitea Actions 🚀
+name: Github Actions Demo
+run-name: ${{ github.actor }} is testing out Github Actions 🚀
 on: [push]
 jobs:
   hello_world_job:
@@ -7,7 +7,7 @@ jobs:
     name: opensuse container checkout test
     steps:
       - name: Hello world action step
-        uses: https://src.opensuse.org/alexlau/gitea-actions-test/@v3
+        uses: https://github.com/AvengerMoJo/gitea_actions_test/@v1
         with:
           who-to-greet: 'AvengerMoJo'
       - name: Get the output time
