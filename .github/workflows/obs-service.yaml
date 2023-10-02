@@ -1,0 +1,14 @@
+name: Gitea Actions Demo
+run-name: ${{ gitea.actor }} is testing out Gitea Actions 🚀
+on: [push]
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: opensuse container checkout test
+    steps:
+      - name: Hello world action step
+        uses: https://src.opensuse.org/alexlau/gitea-actions-test/@v3
+        with:
+          who-to-greet: 'AvengerMoJo'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
