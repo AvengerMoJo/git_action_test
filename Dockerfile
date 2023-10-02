@@ -5,6 +5,6 @@ RUN zypper --non-interactive install osc
 RUN zypper --non-interactive clean --all
 
 COPY hello.sh /hello.sh
-RUN chomod +x /hello.sh
+RUN chmod +x /hello.sh
 
 ENTRYPOINT ["/hello.sh"]
