@@ -1,9 +1,10 @@
-# Container image that runs your code
-FROM alpine:3.10
+FROM opensuse/tumbleweed:latest
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
+RUN zypper --non-interactive update
+RUN zypper --non-interactive install osc
+RUN zypper --non-interactive clean --all
+
 COPY hello.sh /hello.sh
-RUN chmod +x /hello.sh
+RUN chomod +x /hello.sh
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/hello.sh"]
